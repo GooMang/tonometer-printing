@@ -1,0 +1,80 @@
+.active {
+  background-color: red;
+}
+
+.menu {
+  width: 10%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu__start {
+  background-color: rgb(160, 112, 52);
+}
+.menu__type {
+  background-color: rgb(71, 51, 25);
+}
+
+.menu__device {
+  background-color: azure;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(171, 201, 201);
+  margin: 0;
+  display: flex;
+}
+
+.btn-menu {
+  width: 100%;
+  height: 10%;
+  margin: 0;
+  border: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.select-basic_info {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-direction: column;
+}
+
+.basic_info {
+  display: block;
+}
+
+.select-info {
+  display: flex;
+  height: 100vh;
+  width: 394px;
+  margin: 0;
+  border: 0;
+  flex-wrap: wrap;
+}
+
+.btn-printing {
+  align-self: flex-end;
+  width: auto;
+  height: 100px;
+  width: 394px;
+}
+
+.img_example {
+  width: 680px;
+  height: 962px;
+}
+
+.full-info {
+  display: flex;
+}
+
+.full-info.hide {
+  display: none;
+}

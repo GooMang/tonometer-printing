@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,
+        initial-scale=1.0"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <script type="text/javascript" src="js-eel.js"></script>
+  </head>
+  <body class="body">
+    <script type="text/javascript" src="eel.js"></script>
+    <script>
+      linkBaseInfo();
+    </script>
+    <div class="menu menu__start">
+      <button class="btn-menu" id="btn-start__protocols">Протоколы</button>
+      <button class="btn-menu" id="btn-start__info">Инфо</button>
+    </div>
+    <div class="menu menu__type hide">
+      <button class="btn-menu btn-type" id="btn-type__tonometer">
+        Тонометры
+      </button>
+      <button class="btn-menu btn-type" id="btn-type__puls_oximeter">
+        Пульсоксиметры
+      </button>
+      <button class="btn-menu btn-type" id="btn-type__termometer">
+        Термометры ИК
+      </button>
+    </div>
+    <div class="menu menu__type menu__device hide">
+      <button
+        class="btn-menu btn-type btn-type__tonometer hide"
+        value="Р 50.2.020-2002"
+      >
+        Р 50.2.020-2002
+      </button>
+      <button
+        class="btn-menu btn-type btn-type__tonometer hide"
+        value="Р 50.2.032-2004 мех"
+      >
+        Р 50.2.032-2004 мех
+      </button>
+      <button
+        class="btn-menu btn-type btn-type__tonometer hide"
+        value="Р 1323565.2.001-2018"
+      >
+        Р 1323565.2.001-2018
+      </button>
+      <button
+        class="btn-menu btn-type btn-type__tonometer hide"
+        value="МИ 2582-2000"
+      >
+        МИ 2582-2000
+      </button>
+      <button
+        class="btn-menu btn-type btn-type__tonometer hide"
+        value="Р 50.2.032-2004 автомат"
+      >
+        Р 50.2.032-2004 автомат
+      </button>
+      <button
+        class="btn-menu btn-type btn-type__tonometer hide"
+        value="Р 1323565.2.001-2018 автомат"
+      >
+        Р 1323565.2.001-2018 автомат
+      </button>
+      <button
+        class="btn-menu btn-type btn-type__puls_oximeter hide"
+        value="МИ 3280-2010"
+      >
+        МИ 3280-2010
+      </button>
+    </div>
+    <div class="full-info hide">
+      <div class="hide select-info">
+        <div class="select-basic_info hide">
+          <span>Выберите организацию:</span>
+          <select class="basic_info" id="organizationName"></select>
+          <span>Выберите адрес организации:</span>
+          <select class="basic_info" id="organizationAddress"></select>
+          <span>Выберите телефон организации:</span>
+          <select class="basic_info" id="PhoneNumber"></select>
+          <span>Выберите электронную почту организации:</span>
+          <select class="basic_info" id="Mail"></select>
+          <span>Выберите аккредитационный номер организации:</span>
+          <select class="basic_info" id="AccreditationNumber"></select>
+          <span>Выберите поверителя:</span>
+          <select class="basic_info" id="Verifier"></select>
+          <span>Выберите место поверки:</span>
+          <select class="basic_info" id="Location"></select>
+          <span>Выберите тип поверки:</span>
+          <select class="basic_info" id="VerificationType"></select>
+          <span>Выберите прибор поверки:</span>
+          <select class="basic_info" id="VerificationTool"></select>
+          <span>Выберите номер прибора поверки:</span>
+          <select class="basic_info" id="VerificationToolNumber"></select>
+          <span>Выберите погрешность:</span>
+          <select class="basic_info" id="VerificationToolErrorValue"></select>
+        </div>
+        <button class="btn-printing" id="printing">Печать</button>
+      </div>
+      <div style="margin-left: 150px;">
+        <img
+          src="img/MI-2582-2000.jpg"
+          alt="МИ 2582-2000"
+          class="img_example hide"
+          id="МИ 2582-2000"
+        />
+        <img
+          src="img/MI-3280-2010.jpg"
+          alt="МИ 3280-2010"
+          class="img_example hide"
+          id="МИ 3280-2010"
+        />
+        <img
+          src="img/P-1323565-2-001-2018-auto.jpg"
+          alt="Р 1323565.2.001-2018 автомат"
+          class="img_example hide"
+          id="Р 1323565.2.001-2018 автомат"
+        />
+        <img
+          src="img/P-1323565-2-001-2018.jpg"
+          alt="Р 1323565.2.001-2018"
+          class="img_example hide"
+          id="Р 1323565.2.001-2018"
+        />
+        <img
+          src="img/P-50-2-020-2002.jpg"
+          alt="Р 50.2.020-2002"
+          class="img_example hide"
+          id="Р 50.2.020-2002"
+        />
+        <img
+          src="img/P-50-2-032-2004-auto.jpg"
+          alt="Р 50.2.032-2004 автомат"
+          class="img_example hide"
+          id="Р 50.2.032-2004 автомат"
+        />
+        <img
+          src="img/P-50-2-032-2004-manual.jpg"
+          alt="Р 50.2.032-2004 мех"
+          class="img_example hide"
+          id="Р 50.2.032-2004 мех"
+        />
+        <img
+          src="img/Termometer-IK.jpg"
+          alt="Термометры ИК"
+          class="img_example hide"
+          id="Термометры ИК"
+        />
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="js-function.js"></script>
+</html>
