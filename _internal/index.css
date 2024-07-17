@@ -78,3 +78,7 @@ body {
 .full-info.hide {
   display: none;
 }
+
+.disable {
+  pointer-events: none;
+}

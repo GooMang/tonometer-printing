@@ -27,8 +27,8 @@
       <button class="btn-menu btn-type" id="btn-type__puls_oximeter">
         Пульсоксиметры
       </button>
-      <button class="btn-menu btn-type" id="btn-type__termometer">
-        Термометры ИК
+      <button class="btn-menu btn-type" id="btn-type__thermometer">
+        Термометры
       </button>
     </div>
     <div class="menu menu__type menu__device hide">
@@ -74,6 +74,18 @@
       >
         МИ 3280-2010
       </button>
+      <button
+        class="btn-menu btn-type btn-type__thermometer hide"
+        value="Термометры медицинские"
+      >
+        Термометры медицинские
+      </button>
+      <button
+        class="btn-menu btn-type btn-type__thermometer hide"
+        value="Термометры ИК"
+      >
+        Термометры ИК
+      </button>
     </div>
     <div class="full-info hide">
       <div class="hide select-info">
@@ -100,6 +112,7 @@
           <select class="basic_info" id="VerificationToolNumber"></select>
           <span>Выберите погрешность:</span>
           <select class="basic_info" id="VerificationToolErrorValue"></select>
+          <span id="base">Погрешность берётся из базы</span>
         </div>
         <button class="btn-printing" id="printing">Печать</button>
       </div>
@@ -151,6 +164,12 @@
           alt="Термометры ИК"
           class="img_example hide"
           id="Термометры ИК"
+        />
+        <img
+          src="img/Thermometer-medical.jpg"
+          alt="Термометры ИК"
+          class="img_example hide"
+          id="Термометры медицинские"
         />
       </div>
     </div>
