@@ -28,3 +28,9 @@ async function linkBaseInfo() {
     j++;
   }
 }
+
+function checker(bas) {
+  console.log(bas);
+  document.getElementById("check_open").classList.toggle("hide");
+  document.getElementById("check_close").classList.toggle("hide");
+}

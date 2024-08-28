@@ -71,12 +71,23 @@ body {
   height: 962px;
 }
 
+.img_check {
+  width: 400px;
+  height: 400px;
+}
+
 .full-info {
   display: flex;
 }
 
 .full-info.hide {
   display: none;
+}
+
+.info-menu-type{
+  height: 100%;
+  width: 10%;
+  background-color: black;
 }
 
 .disable {

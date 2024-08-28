@@ -35,6 +35,9 @@ const btnTypePulsOximeter = document.getElementsByClassName(
   "btn-type__puls_oximeter"
 );
 const imgExample = document.getElementsByClassName("img_example");
+const btnInfoMenu = document.getElementsByClassName("btn-info-menu");
+const infoMenu = document.getElementsByClassName("info-menu");
+const menuInfoValue = document.getElementsByClassName("menu-info-value");
 
 // Эвент при нажатии на протоколы
 
@@ -44,6 +47,7 @@ btnStartProtocols.addEventListener("click", function () {
   for (i = 0; i < menuType__close.length; i++) {
     menuType__close[i].classList.remove("hide");
   }
+  infoMenu[0].classList.add("hide");
 });
 
 // Эвент при нажатии на инфо
@@ -54,10 +58,26 @@ btnStartInfo.addEventListener("click", function () {
   for (i = 0; i < menuType__close.length; i++) {
     menuType__close[i].classList.add("hide");
   }
+  infoMenu[0].classList.remove("hide");
   count = document.getElementsByClassName("full-info");
   count[0].classList.add("hide");
 });
 
+//Эвент при нажатии на различные позиции в инфо
+
+for (var i = 0; i < btnInfoMenu.length; i++) {
+  btnInfoMenu[i].onclick = function () {
+    for (var j = 0; j < btnInfoMenu.length; j++) {
+      btnInfoMenu[j].classList.remove("active");
+    }
+    for (i = 0; i < menuInfoValue.length; i++) {
+      menuInfoValue[i].classList.add("hide");
+    }
+    this.classList.add("active");
+    count = document.getElementById("info-menu-type-" + this.value);
+    count.classList.remove("hide");
+  };
+}
 // Эвент при нажатии на тонометр
 
 btnTypeTonometer__id.addEventListener("click", function () {
