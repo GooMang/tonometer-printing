@@ -21,15 +21,22 @@ const btnTypePulsOximeter__class = document.getElementsByClassName(
 const btnTypeThermometer__class = document.getElementsByClassName(
   "btn-type__thermometer"
 );
+const btnTypeThermometerWarehouse__class = document.getElementsByClassName(
+  "btn-type__thermometer__warehouse"
+);
 const btnTypeTonometer__id = document.getElementById("btn-type__tonometer");
 const btnTypePulsOximeter__id = document.getElementById(
   "btn-type__puls_oximeter"
 );
 const btnTypeThermometer__id = document.getElementById("btn-type__thermometer");
+const btnTypeThermometerWarehouse__id = document.getElementById("btn-type__thermometer__warehouse");
 const menyDevice__close = document.getElementsByClassName("menu__device");
 const btnTypeTonometer = document.getElementsByClassName("btn-type__tonometer");
 const btnTypeThermometer = document.getElementsByClassName(
   "btn-type__thermometer"
+);
+const btnTypeThermometerWarehouse = document.getElementsByClassName(
+  "btn-type__thermometer__warehouse"
 );
 const btnTypePulsOximeter = document.getElementsByClassName(
   "btn-type__puls_oximeter"
@@ -85,6 +92,7 @@ btnTypeTonometer__id.addEventListener("click", function () {
   menyDevice__close[0].classList.remove("hide");
   btnTypePulsOximeter__id.classList.remove("active");
   btnTypeThermometer__id.classList.remove("active");
+  btnTypeThermometerWarehouse__id.classList.remove("active");
   for (i = 0; i < btnTypePulsOximeter__class.length; i++) {
     btnTypePulsOximeter__class[i].classList.add("hide");
   }
@@ -93,6 +101,9 @@ btnTypeTonometer__id.addEventListener("click", function () {
   }
   for (i = 0; i < btnTypeThermometer__class.length; i++) {
     btnTypeThermometer__class[i].classList.add("hide");
+  }
+  for (i = 0; i < btnTypeThermometerWarehouse__class.length; i++) {
+    btnTypeThermometerWarehouse__class[i].classList.add("hide");
   }
   for (i = 0; i < btnTypeTonometer__class.length; i++) {
     btnTypeTonometer__class[i].classList.remove("hide");
@@ -106,6 +117,7 @@ btnTypePulsOximeter__id.addEventListener("click", function () {
   menyDevice__close[0].classList.remove("hide");
   btnTypeTonometer__id.classList.remove("active");
   btnTypeThermometer__id.classList.remove("active");
+  btnTypeThermometerWarehouse__id.classList.remove("active");
   for (i = 0; i < btnTypePulsOximeter__class.length; i++) {
     btnTypePulsOximeter__class[i].classList.add("hide");
   }
@@ -114,6 +126,9 @@ btnTypePulsOximeter__id.addEventListener("click", function () {
   }
   for (i = 0; i < btnTypeThermometer__class.length; i++) {
     btnTypeThermometer__class[i].classList.add("hide");
+  }
+  for (i = 0; i < btnTypeThermometerWarehouse__class.length; i++) {
+    btnTypeThermometerWarehouse__class[i].classList.add("hide");
   }
   for (i = 0; i < btnTypePulsOximeter__class.length; i++) {
     btnTypePulsOximeter__class[i].classList.remove("hide");
@@ -127,6 +142,32 @@ btnTypeThermometer__id.addEventListener("click", function () {
   menyDevice__close[0].classList.remove("hide");
   btnTypeTonometer__id.classList.remove("active");
   btnTypePulsOximeter__id.classList.remove("active");
+  btnTypeThermometerWarehouse__id.classList.remove("active");
+  for (i = 0; i < btnTypePulsOximeter__class.length; i++) {
+    btnTypePulsOximeter__class[i].classList.add("hide");
+  }
+  for (i = 0; i < btnTypeTonometer__class.length; i++) {
+    btnTypeTonometer__class[i].classList.add("hide");
+  }
+  for (i = 0; i < btnTypeThermometer__class.length; i++) {
+    btnTypeThermometer__class[i].classList.add("hide");
+  }
+  for (i = 0; i < btnTypeThermometerWarehouse__class.length; i++) {
+    btnTypeThermometerWarehouse__class[i].classList.add("hide");
+  }
+  for (i = 0; i < btnTypeThermometer__class.length; i++) {
+    btnTypeThermometer__class[i].classList.remove("hide");
+  }
+});
+
+// Эвент при нажатии на термометр складской
+
+btnTypeThermometerWarehouse__id.addEventListener("click", function () {
+  this.classList.add("active");
+  menyDevice__close[0].classList.remove("hide");
+  btnTypeTonometer__id.classList.remove("active");
+  btnTypePulsOximeter__id.classList.remove("active");
+  btnTypeThermometer__id.classList.remove("active");
   for (i = 0; i < btnTypePulsOximeter__class.length; i++) {
     btnTypePulsOximeter__class[i].classList.add("hide");
   }
@@ -137,21 +178,25 @@ btnTypeThermometer__id.addEventListener("click", function () {
     btnTypeThermometer__class[i].classList.add("hide");
   }
   for (i = 0; i < btnTypeThermometer__class.length; i++) {
-    btnTypeThermometer__class[i].classList.remove("hide");
+    btnTypeThermometer__class[i].classList.add("hide");
+  }
+  for (i = 0; i < btnTypeThermometerWarehouse__class.length; i++) {
+    btnTypeThermometerWarehouse__class[i].classList.remove("hide");
   }
 });
 
-// Нажатие на любой термометр
+// Нажатие на любой термометр складской
 
-for (var i = 0; i < btnTypeThermometer.length; i++) {
-  console.log("sd");
-  btnTypeThermometer[i].onclick = function () {
-    console.log("ds");
+for (var i = 0; i < btnTypeThermometerWarehouse.length; i++) {
+  btnTypeThermometerWarehouse[i].onclick = function () {
     for (var j = 0; j < btnTypeTonometer.length; j++) {
       btnTypeTonometer[j].classList.remove("active");
     }
     for (var j = 0; j < btnTypePulsOximeter.length; j++) {
       btnTypePulsOximeter[j].classList.remove("active");
+    }
+    for (var j = 0; j < btnTypeThermometerWarehouse.length; j++) {
+      btnTypeThermometerWarehouse[j].classList.remove("active");
     }
     for (var j = 0; j < btnTypeThermometer.length; j++) {
       btnTypeThermometer[j].classList.remove("active");
@@ -169,6 +214,36 @@ for (var i = 0; i < btnTypeThermometer.length; i++) {
   };
 }
 
+// Нажатие на любой термометр
+
+for (var i = 0; i < btnTypeThermometer.length; i++) {
+  btnTypeThermometer[i].onclick = function () {
+    for (var j = 0; j < btnTypeTonometer.length; j++) {
+      btnTypeTonometer[j].classList.remove("active");
+    }
+    for (var j = 0; j < btnTypePulsOximeter.length; j++) {
+      btnTypePulsOximeter[j].classList.remove("active");
+    }
+    for (var j = 0; j < btnTypeThermometer.length; j++) {
+      btnTypeThermometer[j].classList.remove("active");
+    }
+    for (var j = 0; j < btnTypeThermometerWarehouse.length; j++) {
+      btnTypeThermometerWarehouse[j].classList.remove("active");
+    }
+    for (var j = 0; j < imgExample.length; j++) {
+      imgExample[j].classList.add("hide");
+    }
+    methodology = this.value;
+    console.log(methodology);
+    document.getElementById(methodology).classList.remove("hide");
+    this.classList.add("active");
+    document.getElementsByClassName("full-info")[0].classList.remove("hide");
+    VerificationToolErrorValue.classList.add("disable");
+    base.classList.remove("hide");
+  };
+}
+
+
 // Нажатие на любой тонометр
 
 for (var i = 0; i < btnTypeTonometer.length; i++) {
@@ -181,6 +256,9 @@ for (var i = 0; i < btnTypeTonometer.length; i++) {
     }
     for (var j = 0; j < btnTypeThermometer.length; j++) {
       btnTypeThermometer[j].classList.remove("active");
+    }
+    for (var j = 0; j < btnTypeThermometerWarehouse.length; j++) {
+      btnTypeThermometerWarehouse[j].classList.remove("active");
     }
     for (var j = 0; j < imgExample.length; j++) {
       imgExample[j].classList.add("hide");
@@ -215,6 +293,9 @@ for (var i = 0; i < btnTypePulsOximeter.length; i++) {
     }
     for (var j = 0; j < btnTypeThermometer.length; j++) {
       btnTypeThermometer[j].classList.remove("active");
+    }
+    for (var j = 0; j < btnTypeThermometerWarehouse.length; j++) {
+      btnTypeThermometerWarehouse[j].classList.remove("active");
     }
     for (var j = 0; j < imgExample.length; j++) {
       imgExample[j].classList.add("hide");
